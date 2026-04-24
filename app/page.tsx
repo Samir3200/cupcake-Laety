@@ -1,65 +1,108 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-export default function Home() {
+export default function CupcakeLaety() {
+  const media = {
+    heroVideo: "/Photos-videos/video1.mp4",
+    menuImg: "/Photos-videos/flyer.jpeg",
+    charlotteImg: "/Photos-videos/image1.jpeg",
+    briocheVideo: "/Photos-videos/video3.mp4",
+    platRizImg: "/Photos-videos/image2.jpeg",
+    petitDejImg: "/Photos-videos/image4.jpeg",
+    saleImg: "/Photos-videos/image3.jpeg",
+    cupcakeVideo: "/Photos-videos/video2.mp4"
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-[#FFFDFB] text-[#4a3f35] font-sans">
+
+      {/* --- HEADER DISCRET --- */}
+      <nav className="py-8 text-center">
+        <h1 className="text-[60px] font-serif tracking-tighter italic">Cupcake Laety</h1>
+        <div className="w-20 h-[1px] bg-[#d4bc9c] mx-auto mt-4"></div>
+      </nav>
+      
+
+      <main className="max-w-full mx-auto px-0">
+
+        {/* --- SECTION VIDÉO PRINCIPALE (Taille originale restaurée) --- */}
+        <section className="flex flex-col items-center mb-24">
+          <div className="relative w-full max-w-[500px] aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-white">
+            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+              <source src={media.heroVideo} type="video/mp4" />
+            </video>
+          </div>
+          <p className="mt-6 italic text-gray-500 font-serif text-lg">"La passion du fait-maison"</p>
+        </section>
+
+        {/* --- GRILLE DE CRÉATIONS (Mélange images/vidéos) --- */}
+
+        <section className="mb-32">
+          <div className="max-w-2xl mx-auto mb-12">
+            <h2 className="text-2xl font-serif text-center mb-6 uppercase tracking-[0.2em]">L'album Gourmand</h2>
+          </div>
+          <div className="w-screen px-0">
+            <div className="gallery-grid">
+              <div className="rounded-2xl shadow-md flex flex-col items-center">
+                <Image src={media.charlotteImg} alt="Gâteau" width={200} height={300} className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]" />
+                <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Charlotte au chocolat</p>
+              </div>
+               <div className="rounded-[2rem] shadow-md flex flex-col items-center">
+                <video autoPlay loop muted playsInline width="200" height="300" className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]">
+                  <source src={media.briocheVideo} type="video/mp4" />
+                </video>
+                <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Brioche tressée maison</p>
+              </div>
+              <div className="rounded-2xl shadow-md flex flex-col items-center">
+                <Image src={media.platRizImg} alt="Plat" width={200} height={300} className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]" />
+                <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Assiette gourmande (riz & bouchées)</p>
+              </div>
+              <div className="rounded-2xl shadow-md flex flex-col items-center">
+                <Image src={media.saleImg} alt="Salé" width={200} height={300} className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]" />
+                <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Plat salé du jour</p>
+              </div>
+              <div className="rounded-[2rem] shadow-md flex flex-col items-center">
+                <video autoPlay loop muted playsInline width="200" height="300" className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]">
+                  <source src={media.cupcakeVideo} type="video/mp4" />
+                </video>
+                <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Cupcakes gourmands</p>
+              </div>
+              <div className="rounded-2xl shadow-md flex flex-col items-center">
+                <Image src={media.petitDejImg} alt="Petit Déjeuner" width={200} height={300} className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]" />
+                <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Petit déjeuner maison</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* --- FLYER EN DESSOUS DE LA GALERIE --- */}
+        <div className="flex justify-center my-12">
+          <Image src={media.menuImg} alt="Flyer Cupcake Laety" width={280} height={350} className="rounded-2xl shadow-lg w-full max-w-[280px] sm:max-w-[350px] md:max-w-[350px] h-auto mt-[30px] mb-[30px]" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        {/* --- SECTION SNAPCHAT --- */}
+        <section className="mb-32 bg-[#FFFC00]/10 rounded-[3rem] p-12 text-center border border-[#FFFC00]/20 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-serif mb-8">Prête pour une commande ?</h2>
+            <div className="flex flex-row justify-center gap-[120px] flex-wrap">
+            <a href="https://www.snapchat.com/add/aliiciaa.77" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all no-underline">
+              <span className="text-2xl">
+                <img src="/Photos-videos/pngtree-snapchat-icon-png-image_3584850.jpg" alt="Snapchat" width="32" height="32" className="inline-block align-middle rounded-full" />
+              </span>
+              <span className="font-bold tracking-tight">aliiciaa.77</span>
+            </a>
+            <a href="https://www.snapchat.com/add/angellajoanita" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all no-underline">
+              <span className="text-2xl">
+                <img src="/Photos-videos/pngtree-snapchat-icon-png-image_3584850.jpg" alt="Snapchat" width="32" height="32" className="inline-block align-middle rounded-full" />
+              </span>
+              <span className="font-bold tracking-tight">angellajoanita</span>
+            </a>
+          </div>
+        </section>
+
       </main>
+
+      <footer className="pb-12 text-center text-gray-400 text-sm">
+        <p>© 2026 Cupcake Laety • Meaux & Environs</p>
+      </footer>
     </div>
   );
 }
