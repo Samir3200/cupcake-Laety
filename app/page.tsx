@@ -83,12 +83,6 @@ export default function CupcakeLaety() {
         <section className="mb-32 bg-[#FFFC00]/10 rounded-[3rem] p-12 text-center border border-[#FFFC00]/20 max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif mb-8">Prête pour une commande ?</h2>
             <div className="flex flex-row justify-center gap-[120px] flex-wrap">
-            <a href="https://www.snapchat.com/add/aliiciaa.77" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all no-underline">
-              <span className="text-2xl">
-                <img src="/Photos-videos/pngtree-snapchat-icon-png-image_3584850.jpg" alt="Snapchat" width="32" height="32" className="inline-block align-middle rounded-full" />
-              </span>
-              <span className="font-bold tracking-tight">aliiciaa.77</span>
-            </a>
             <a href="https://www.snapchat.com/add/angellajoanita" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all no-underline">
               <span className="text-2xl">
                 <img src="/Photos-videos/pngtree-snapchat-icon-png-image_3584850.jpg" alt="Snapchat" width="32" height="32" className="inline-block align-middle rounded-full" />
