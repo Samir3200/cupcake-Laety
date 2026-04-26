@@ -48,7 +48,7 @@ export default function CupcakeLaety() {
           <div className="w-screen px-0">
             <div className="gallery-grid">
               <div className="rounded-2xl shadow-md flex flex-col items-center">
-                <Image src={media.charlotteImg} alt="Gâteau" width={200} height={300} className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]" />
+                <Image src={media.charlotteImg} alt="Gâteau" width={200} height={300} className="max-w-[200px] w-full max-h-[310px] object-cover rounded-[30px]" loading="eager" />
                 <p className="text-center text-base text-gray-800 font-semibold mt-2 bg-yellow-100 rounded px-2">Charlotte au chocolat</p>
               </div>
                <div className="rounded-[2rem] shadow-md flex flex-col items-center">
