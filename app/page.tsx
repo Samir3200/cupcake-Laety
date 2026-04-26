@@ -108,7 +108,7 @@ export default function CupcakeLaety() {
 
         {/* --- FLYER EN DESSOUS DE LA GALERIE --- */}
         <div className="flex justify-center my-12">
-          <Image src={media.menuImg} alt="Flyer Cupcake Laety" width={280} height={350} className="rounded-2xl shadow-lg w-full max-w-[280px] sm:max-w-[350px] md:max-w-[350px] h-auto mt-[30px] mb-[30px]" />
+          <Image src={media.menuImg} alt="Flyer Cupcake Laety" width={280} height={350} className="rounded-2xl shadow-lg mt-[30px] mb-[30px]" />
         </div>
 
         {/* --- SECTION SNAPCHAT --- */}
