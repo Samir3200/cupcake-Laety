@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import QrCode from './QrCode';
 
 export default function CupcakeLaety() {
   const media = {
@@ -40,8 +41,6 @@ export default function CupcakeLaety() {
           </div>
           <p className="mt-6 italic text-gray-500 font-serif text-lg">"La passion du fait-maison"</p>
         </section>
-
-        {/* --- GRILLE DE CRÉATIONS (Mélange images/vidéos) --- */}
 
         <section className="mb-32">
           <div className="max-w-2xl mx-auto mb-12">
@@ -120,7 +119,7 @@ export default function CupcakeLaety() {
 
         {/* --- SECTION SNAPCHAT --- */}
         <section className="mb-32 bg-[#FFFC00]/10 rounded-[3rem] p-12 text-center border border-[#FFFC00]/20 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-serif mb-8">Prête pour une commande ?</h2>
+          <h2 className="text-3xl font-serif mb-8">Prête(e) pour une commande ?</h2>
           <div className="flex flex-row justify-center gap-[120px] flex-wrap">
             <a href="https://www.snapchat.com/add/angellajoanita" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all no-underline">
               <span className="text-2xl">
@@ -141,6 +140,11 @@ export default function CupcakeLaety() {
 
       <footer className="pb-12 text-center text-gray-400 text-sm">
         <p>© 2026 Cupcake Laety • Meaux & Environs</p>
+        <p>créé par Samir : <a href="mailto:samelmir5a@gmail.com" className="text-gray-400 hover:text-gray-600">samelmir5a@gmail.com</a></p>
+        <div className="flex justify-center mt-6">
+          <QrCode value="https://cupcake-laety.vercel.app" />
+        </div>
+        <p className="mt-2 text-xs text-gray-300">Scannez pour accéder au site</p>
       </footer>
     </div>
   );
